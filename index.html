@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" href="https://printonic.ru/uploads/images/2016/03/26/img_56f68ee1278a4.jpg" type="image/png">
+</head>
+<body>
+    <header>
+        <div id="logo" onclick="slowScroll('#top')">
+            <span>Kukuruzia</span>
+        </div>
+        <div id="about">
+            <a href="https://vk.com/r0k1ng" target="blank" title="Возможности" onclick="slowScroll('#main')">VK</a>
+            <a href="https://www.youtube.com/channel/UCInAtzdijDFSWfY3eAGOOCw" target="blank" title="Возможности" onclick="slowScroll('#overiview')">YOUTUBE</a>
+            <a href="https://www.twitch.tv/6de6reagent6" title="Возможности" target="blank" onclick="slowScroll('#contacts')">TWITCH</a>
+            <a href="https://www.donationalerts.com/r/6de6reagent6" title="Возможности" target="blank" onclick="slowScroll('#faq')">DONATE</a>
+        </div>
+    </header>
+
+    <div id="top">
+        <h1>Республика</h1>
+        <h3>Кукурузия!</h3>
+        </div>
+        
+        <div id="main">
+            <div class="intro">
+                <h2>По всем вопросам froized@mail.ru</h2>
+                <span> Copyright © Leon Levchenko (Kukuruzia.com) 2021 год.</span>
+            </div>
+            <div class="text">
+                <span>Все права защищены.</span>
+            </div>
+        </div>
+   
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            function slowScroll(id) {
+                $('html','body').animate({
+                     scrollTop: $(id).offset().top
+                 }, 500);
+            }
+
+        $(document).on("scroll", function() {
+            if($(window).scrollTop() === 0)
+              $("header").removeClass("fixed");
+              else
+              $("header").attr("class", "fixed");
+        });
+        
+        </script>
+</body>
+</html>
